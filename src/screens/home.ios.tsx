@@ -3,6 +3,7 @@ import React from 'react';
 import { trigger } from 'react-native-haptic-feedback';
 import { ScrollView } from 'react-native-gesture-handler';
 import PressableCard from '../components/PressableCard';
+import { colorPalette } from '../utils/colorPalette';
 
 export default function IOS() {
   // optional
@@ -30,7 +31,8 @@ export default function IOS() {
           return (
             <PressableCard
               key={index}
-              onPress={() => trigger(item.type, options)}>
+              onPress={() => trigger(item.type, options)}
+              colors={[colorPalette[index], colorPalette[index + 1]]}>
               {item.text}
             </PressableCard>
           );

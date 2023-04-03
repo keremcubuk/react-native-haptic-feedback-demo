@@ -7,15 +7,6 @@ import Android from './home.android';
 
 const Stack = createNativeStackNavigator();
 
-const headerOptions = (title: any): object => {
-  return {
-    headerShown: false,
-    headerBackTitleVisible: false,
-    headerTitle: title,
-    headerTitleAlign: 'center',
-  };
-};
-
 export const HomeStack = () => {
   return (
     <Stack.Navigator>

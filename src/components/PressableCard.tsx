@@ -20,7 +20,7 @@ export default function PressableCard(props: any) {
       <Box
         bg={{
           linearGradient: {
-            colors: [createHex(), createHex()],
+            colors: props.colors ? props.colors : [createHex(), createHex()],
             start: [0, 0],
             end: [1, 0],
           },
