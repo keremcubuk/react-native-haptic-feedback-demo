@@ -23,6 +23,7 @@
     "react-native-screens": "^3.20.0",
     "react-native-svg": "12.1.1",
     "react-native-ui-lib": "^7.2.3",
+    "react-native-vector-icons": "^9.2.0",
     "react-native-webview": "^11.26.1"
   },
   "devDependencies": {

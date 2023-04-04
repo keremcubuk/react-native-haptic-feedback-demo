@@ -2,10 +2,10 @@ import { VStack } from 'native-base';
 import React from 'react';
 import { trigger } from 'react-native-haptic-feedback';
 import { ScrollView } from 'react-native-gesture-handler';
-import PressableCard from '../components/PressableCard';
-import { colorPalette } from '../utils/colorPalette';
+import PressableCard from '../../components/PressableCard';
+import { colorPalette } from '../../utils/colorPalette';
 
-export default function Common() {
+export default function IOS() {
   // optional
   const options = {
     enableVibrateFallback: true,
@@ -21,6 +21,7 @@ export default function Common() {
     { type: 'notificationSuccess', text: 'notificationSuccess' },
     { type: 'notificationWarning', text: 'notificationWarning' },
     { type: 'notificationError', text: 'notificationError' },
+    { type: 'selection', text: 'selection' },
   ];
 
   return (

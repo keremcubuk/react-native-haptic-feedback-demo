@@ -12,9 +12,11 @@ import { NativeBaseProvider } from 'native-base';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // Screens
-import { HomeStack } from './screens/home.stack';
+import { HomeStack } from './screens/Home/home.stack';
+import WebviewScreen from './screens/Webview';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LinearGradient from 'react-native-linear-gradient';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const config = {
   dependencies: {
@@ -35,9 +37,26 @@ function App() {
               headerShown: false,
               headerTitleStyle: { alignSelf: 'center' },
             })}>
-            <Tab.Screen name="Home" component={HomeStack} />
-            {/* <Tab.Screen name="AboutStack" component={AboutStack} />
-          <Tab.Screen name="Contact" component={Contact} /> */}
+            <Tab.Screen
+              name="Home"
+              component={HomeStack}
+              options={{
+                tabBarLabel: 'Home',
+                tabBarIcon: ({ color, size }) => (
+                  <Icon name="home" color={color} size={size} />
+                ),
+              }}
+            />
+            <Tab.Screen
+              name="AboutStack"
+              component={WebviewScreen}
+              options={{
+                tabBarLabel: 'WebView',
+                tabBarIcon: ({ color, size }) => (
+                  <Icon name="internet-explorer" color={color} size={size} />
+                ),
+              }}
+            />
           </Tab.Navigator>
         </NavigationContainer>
       </SafeAreaView>

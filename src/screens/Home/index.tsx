@@ -1,8 +1,8 @@
-import { VStack } from 'native-base';
 import React from 'react';
+import { VStack } from 'native-base';
 import { ScrollView } from 'react-native-gesture-handler';
-import PressableCard from '../components/PressableCard';
-import { colorPalette } from '../utils/colorPalette';
+import PressableCard from '../../components/PressableCard';
+import { colorPalette } from '../../utils/colorPalette';
 
 export default function HomeScreen({ navigation }): JSX.Element {
   return (
